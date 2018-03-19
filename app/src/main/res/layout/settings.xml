@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="260dp"
+        android:id="@+id/tv"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ring after:"
+        android:textColor="#e52b36"/>
+
+    <LinearLayout
+        android:id="@+id/picker"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <NumberPicker
+            android:id="@+id/nph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textSize="20dp"
+                android:textColor="#e52b36"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <NumberPicker
+                android:id="@+id/npm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></NumberPicker>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textSize="20dp"
+                android:textColor="#e52b36"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="min"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <NumberPicker
+                android:id="@+id/nps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></NumberPicker>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textSize="20dp"
+                android:textColor="#e52b36"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sec"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/colorSecondary"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sound:"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/ringtone"
+                android:textColor="@color/colorSecondary"
+                android:textSize="25dp"
+                android:text="Ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <RadioButton
+                android:id="@+id/notification"
+                android:textColor="@color/colorSecondary"
+                android:textSize="25dp"
+                android:text="Notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:background="#e52b36"
+        android:id="@+id/save"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE AND CLOSE"/>
+</RelativeLayout>
