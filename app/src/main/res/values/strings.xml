@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">PrimusGradus</string>
+    <string name="app_name">Rescuer</string>
+    <string name="intro">Ever been in an unpleasant situation from which you just wanted to run away as fast as possible? I mean, how nice would it be if your phone magically rang at the right moment, giving you the perfect excuse to flee? Now it can: put your phone in Rescue mode by clicking the button below. Then, when you feel like escaping, just double-tap the screen. After 5 seconds (default time that can be changed in Settings), your phone will ring to the rescue! The ringing stops after 20 seconds, but you can also stop it by simply double-tapping the screen again.\nEnjoy!</string>
 </resources>

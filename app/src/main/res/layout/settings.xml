@@ -89,59 +89,118 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
+        android:id="@+id/container"
         android:layout_below="@id/picker"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:textColor="@color/colorSecondary"
-            android:textSize="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sound:"/>
-
-        <RadioGroup
-            android:id="@+id/radiogroup"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/picker"
+            android:layout_width="0dp"
             android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/ringtone"
+            <TextView
                 android:textColor="@color/colorSecondary"
-                android:textSize="25dp"
-                android:text="Ringtone"
-                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="Sound:"/>
 
-            <RadioButton
-                android:id="@+id/notification"
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/ringtone"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="25dp"
+                    android:text="Ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RadioButton
+                    android:id="@+id/notification"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="25dp"
+                    android:text="Notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
                 android:textColor="@color/colorSecondary"
-                android:textSize="25dp"
-                android:text="Notification"
-                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="Vibrate on Tap:"/>
 
-        </RadioGroup>
+            <RadioGroup
+                android:id="@+id/radiogroupv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/vibrateYes"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="25dp"
+                    android:text="On"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RadioButton
+                    android:id="@+id/vibrateNo"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="25dp"
+                    android:text="Off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-
-
     <Button
+        android:layout_below="@id/container"
+        android:layout_marginTop="30dp"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:textColor="#000000"
         android:background="#e52b36"
         android:id="@+id/save"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SAVE AND CLOSE"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adMobBannerSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>
